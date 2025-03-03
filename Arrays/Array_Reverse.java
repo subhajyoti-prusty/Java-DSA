@@ -7,12 +7,23 @@
 
 public class Array_Reverse {
 
+    public static void reverseArray(int arr[], int n){
+
+        int arr1[] =  new int[n];
+
+        for (int i = 0; i < arr.length; i++) {
+            arr1[i] = arr[n-i-1];
+        }
+
+        for (int i = 0; i < arr1.length; i++) {
+            System.out.print(arr1[i] + " ");
+        }
+    }
     public static void main(String[] args) {
         int[] arr = { 1, 4, 3, 2, 6, 5 };
 
-        // reverseArray(arr);
-  
-        for (int i = 0; i < arr.length; i++) 
-            System.out.print(arr[i] + " ");
+        int n = 6;
+
+        reverseArray(arr,n);
     }
 }
